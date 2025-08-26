@@ -40,43 +40,34 @@ If you found this template useful for your work, I would appreciate any of the f
 
 
 
-PORTUGUÊS
+# Template LaTeX para Artigos de Economia
 
-# Análise dos Efeitos da Taxa de Juros sobre a Inflação no Brasil (2020-2025)
+Este é o meu repositório modelo padrão para a criação de artigos acadêmicos em LaTeX.
 
-Este repositório contém o código-fonte LaTeX e os dados para o artigo mencionado acima.
+O objetivo é fornecer uma estrutura de arquivos consistente e um ambiente de desenvolvimento reproduzível usando o GitHub Codespaces, com todas as ferramentas necessárias pré-instaladas.
 
-**Autores:**
-* Seu Nome (Universidade Federal de Exemplo)
-* Nome do Coautor (Instituição do Coautor)
+## Estrutura de Arquivos
 
-## Resumo (Abstract)
+* **/main.tex**: O arquivo LaTeX principal do documento. É aqui que a escrita começa.
+* **/preambulo.tex**: Contém todos os pacotes (`\usepackage{...}`), comandos e configurações de estilo que são comuns a todos os artigos.
+* **/bibliografia.bib**: Arquivo de referências no formato BibLaTeX.
+* **/figuras/**: Pasta para armazenar todas as imagens, gráficos e figuras do artigo.
+* **/.devcontainer/devcontainer.json**: Arquivo de configuração que instrui o GitHub Codespaces a instalar o TeX Live e a extensão "LaTeX Workshop" do VS Code.
+* **/.gitignore**: Lista de arquivos auxiliares do LaTeX que são ignorados pelo Git.
 
-Este trabalho investiga o impacto das recentes alterações na taxa de juros básica (Selic) sobre os principais índices de inflação no Brasil durante o período pós-pandemia. Utilizando um modelo de Vetores Autorregressivos (VAR), analisamos a dinâmica e a defasagem da transmissão da política monetária para os preços ao consumidor.
+## Como Utilizar este Modelo
 
----
+Para começar um novo artigo, siga os passos abaixo:
 
-## Status do Artigo
+1.  Clique no botão verde **"Use this template"** -> **"Create a new repository"**.
+2.  Dê um nome ao repositório do seu novo artigo (ex: `artigo-crescimento-desigualdade-2025`).
+3.  Clone o novo repositório ou abra-o diretamente no **GitHub Codespaces** (`Code` -> `Codespaces` -> `Create codespace`).
+4.  Aguarde o ambiente ser construído. O LaTeX e as extensões serão instalados automaticamente.
+5.  Comece a escrever no arquivo `main.tex`!
 
-**Status:** `Em desenvolvimento`
+## Configuração do Ambiente
 
-*(Outras opções de status: `Submetido`, `Aceito`, `Publicado`)*
-
----
-
-## Como Compilar o Documento
-
-1.  **Pré-requisitos:** Este projeto é configurado para ser executado em um ambiente [GitHub Codespaces](https.github.com/features/codespaces).
-2.  **Abertura:** Abra este repositório em um Codespace. O ambiente com LaTeX (TeX Live) e todas as extensões necessárias será configurado automaticamente.
-3.  **Compilação:** Abra o arquivo `main.tex`. A extensão "LaTeX Workshop" para VS Code irá compilar o documento automaticamente ao salvar. O PDF resultante será o `main.pdf`.
-
-## Citação
-
-Se este trabalho for publicado, as informações de citação serão adicionadas aqui.
-
-## Licença
-
-Este trabalho está licenciado sob a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+Este modelo está configurado para usar o [BibLaTeX](https://www.ctan.org/pkg/biblatex) com o backend `biber` para gerenciamento de citações, utilizando o estilo `apa`. A compilação é gerenciada pela extensão [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.LaTeX-Workshop) no VS Code.
 
 ## Como Agradecer
 
@@ -85,3 +76,5 @@ Se você utilizou este template e o achou útil para o seu trabalho, ficarei fel
 * **Dê uma estrela (Star) ⭐** neste repositório no GitHub.
 * Considere fazer uma breve menção na seção de **Agradecimentos** do seu artigo. Por exemplo:
     > "Gostaríamos de agradecer a Eric Lisboa Coda Dias por disponibilizar o template LaTeX que serviu como base para a formatação deste artigo (https://github.com/ericlisboa)."
+
+*Última atualização do modelo: 26 de agosto de 2025.*
