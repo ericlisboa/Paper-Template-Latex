@@ -1,0 +1,22 @@
+% --- Essential Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}         % For mathematical equations
+\usepackage{graphicx}        % For including figures
+\usepackage{booktabs}        % For high-quality tables
+\usepackage{hyperref}        % For clickable links
+\usepackage[
+    backend=biber,
+    style=apa,               % Or another citation style (e.g., chicago, mla)
+    sorting=nyt
+]{biblatex}
+\addbibresource{references.bib} % Points to the .bib file
+
+% --- Page Setup ---
+\usepackage[
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+]{geometry}
