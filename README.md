@@ -1,4 +1,4 @@
-# LaTeX Template for Economics Papers
+# LaTeX Template for Papers
 
 This is my standard template repository for creating academic papers in LaTeX.
 
@@ -40,7 +40,7 @@ If you found this template useful for your work, I would appreciate any of the f
 
 
 
-# Template LaTeX para Artigos de Economia
+# Template LaTeX para Artigos Acadêmicos
 
 Este é o meu repositório modelo padrão para a criação de artigos acadêmicos em LaTeX.
 
