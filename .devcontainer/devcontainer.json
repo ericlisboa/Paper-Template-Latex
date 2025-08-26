@@ -1,27 +1,26 @@
 {
   "name": "LaTeX Academic Environment",
-
-  // (PT) Usa uma imagem base do Debian/Ubuntu
-  // (EN) Uses a base Debian/Ubuntu image
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
-
-  "features": {
-    // (PT) Esta "feature" instala automaticamente o TeX Live e ferramentas essenciais
-    // (EN) This "feature" automatically installs TeX Live and essential tools
-    "ghcr.io/devcontainers-contrib/features/latex:1": {}
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-
   "customizations": {
     "vscode": {
       "extensions": [
-        // (PT) Instala a extensão essencial para LaTeX
-        // (EN) Installs the essential extension for LaTeX
-        "james-yu.latex-workshop"
-      ]
+        "James-Yu.latex-workshop"
+      ],
+      "settings": {
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.outDir": "out",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ]
+      }
     }
-  },
-
-  // (PT) Comando a ser executado após a criação do contêiner
-  // (EN) Command to be executed after the container is created
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y biber"
+  }
 }

@@ -1,19 +1,89 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 
-% Inclui seu preâmbulo com pacotes e configurações
-\input{init.tex}
+% --- (PT) Idioma e Codificação ---
+% --- (EN) Language and Encoding ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel} % (PT) Para hifenização em português / (EN) For Portuguese hyphenation rules
 
-\title{Title}
-\author{Name}
+% --- (PT) Fonte e Microtipografia (essencial para boa aparência) ---
+% --- (EN) Font and Microtypography (essential for good typesetting) ---
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- (PT) Pacotes de Matemática ---
+% --- (EN) Math Packages ---
+\usepackage{amsmath, amssymb, amsthm}
+
+% --- (PT) Layout da Página ---
+% --- (EN) Page Layout ---
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing % (PT) Espaçamento 1.5 / (EN) 1.5 line spacing
+
+% --- (PT) Tabelas e Figuras ---
+% --- (EN) Tables and Figures ---
+\usepackage{graphicx}
+\usepackage{booktabs} % (PT) Para tabelas profissionais / (EN) For professional-quality tables
+\usepackage{siunitx}  % (PT) Para alinhar números em tabelas / (EN) For aligning numbers in tables
+\sisetup{output-decimal-marker={,}} % (PT) Padrão brasileiro para vírgula decimal / (EN) Brazilian standard for decimal comma
+
+% --- (PT) Hiperlinks e Referências Cruzadas Inteligentes ---
+% --- (EN) Hyperlinks and Smart Cross-References ---
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% --- (PT) Citações com biblatex + biber ---
+% --- (EN) Citations with biblatex + biber ---
+\usepackage{csquotes} % (PT) Fortemente recomendado com biblatex / (EN) Strongly recommended with biblatex
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  natbib=true, % (PT) Ativa comandos como \citet e \citep / (EN) Enables natbib-style commands like \citet and \citep
+  giveninits=true
+]{biblatex}
+\addbibresource{references/references.bib}
+
+% --- (PT) Informações do Artigo ---
+% --- (EN) Article Information ---
+\title{(PT) Título do Artigo / (EN) Article Title}
+\author{(PT) Seu Nome / (EN) Your Name}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
-Start here.
+\begin{abstract}
+    (PT) Coloque aqui o resumo do artigo. \\
+    (EN) Place the article abstract here.
+\end{abstract}
 
+\noindent \textbf{JEL Codes:} C01, E31. \\
+\textbf{Keywords:} keyword 1, keyword 2.
+
+% --- Sections ---
+
+\section{(PT) Introdução / (EN) Introduction}
+(PT) Texto da introdução. Exemplo de citação no estilo autor-ano: \citet{lucas1976} e \citep{barro1979}. Ver a \Cref{sec:modelo} para a descrição do modelo. \\
+(EN) Introduction text. Example of author-year citation style: \citet{lucas1976} and \citep{barro1979}. See \Cref{sec:modelo} for the model description.
+
+\section{(PT) Modelo Teórico / (EN) Theoretical Model}
+\label{sec:modelo}
+(PT) Apresentação do modelo, com equações como a \Cref{eq:curva_phillips}. \\
+(EN) Presentation of the model, with equations like \Cref{eq:curva_phillips}.
+\begin{equation}
+  \label{eq:curva_phillips}
+  \pi_t = \beta E_t \pi_{t+1} + \kappa x_t + u_t.
+\end{equation}
+
+\section{(PT) Conclusão / (EN) Conclusion}
+(PT) Conclusões e possíveis extensões. \\
+(EN) Conclusions and future extensions.
+
+
+% --- (PT) Imprime a bibliografia no final do documento ---
+% --- (EN) Prints the bibliography at the end of the document ---
 \printbibliography
 
 \end{document}
